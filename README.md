@@ -1,6 +1,4 @@
-# My project's name
-
-​FITFUN
+# FITFUN
 
 ## App description & purpose
 
