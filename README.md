@@ -1,34 +1,29 @@
 # My project's name
 
-​
+​FITFUN
 
 ## App description & purpose
 
 ​
-With this app the user can...
-​
-It is part of my final project for the Ironhack web dev bootcamp, a MERN fullstack application.
-​
+With this App I intend to change the way of doing sports in the world. In recent years, alternatives to the conventional gym have been born. With FitFun, I intend to unite sport and laughter, to offer an alternative gym that seeks the Global well-being of people
+
 
 ## Backend connection
 
 ​
-It is the frontend repository and it is connected to [this backend](http://link-to-my-backend-repo.org/).
+It is the frontend repository and it is connected to [this backend](https://github.com/xavireina/Server-jwt).
 
 ## .env
 
-you have to setup `.env` example in `.env.sample`
+You have to setup `.env` example in `.env.sample`
 ​
 
 ## Install the app
 
-​
 
 ```
 $ npm install
 ```
-
-​
 
 ## Start & watch
 
