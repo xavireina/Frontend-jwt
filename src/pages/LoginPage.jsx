@@ -40,7 +40,7 @@ function LoginPage() {
               src="https://cdn.pixabay.com/photo/2018/02/25/12/31/crossfit-3180368_960_720.png"
               alt="Fitfun"
             />
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Login</h2>
           
           </div>
           <form onSubmit={handleLoginSubmit} className="mt-8 space-y-6" action="#" method="POST">
@@ -90,7 +90,7 @@ function LoginPage() {
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                 </span>
-                Sign in
+                Login
               </button>
             </div>
           </form>
