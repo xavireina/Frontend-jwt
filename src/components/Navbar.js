@@ -8,15 +8,19 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav>
+
+
+   
+
+    <nav className="flex items-center justify-between flex-wrap bg-indigo-700 p-6 text-white">
       <Link to="/">
-        <button>Navbar</button>
+        <button>HomePage</button>
       </Link>
 
       {isLoggedIn && (
         <>
           <Link to="/protected">
-            <button>Protected</button>
+            <button>MyProfile</button>
           </Link>
 
           <button onClick={logOutUser}>Logout</button>
