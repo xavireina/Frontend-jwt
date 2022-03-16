@@ -36,6 +36,12 @@ class ApiService {
     // same as
     // return axios.post("http://localhost:5005/auth/verify");
   };
+
+  edit = requestBody => {
+    return this.api.post('/auth/edit', requestBody);
+    // same as
+    // return axios.post("http://localhost:5005/auth/verify");
+  };
 }
 
 // Create one instance (object) of the service

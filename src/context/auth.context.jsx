@@ -24,6 +24,13 @@ function AuthProviderWrapper(props) {
     });
   };
 
+  const edit = async requestBody => {
+    return apiService.edit(requestBody).then(response => {
+      storeToken(response.data.authToken);
+      authenticateUser();
+    });
+  };
+
   const authenticateUser = () => {
     apiService
       .verify()
@@ -62,7 +69,7 @@ function AuthProviderWrapper(props) {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser, signup, login }}
+      value={{ isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser, signup, login, edit }}
     >
       {props.children}
     </AuthContext.Provider>

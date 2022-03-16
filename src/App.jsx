@@ -5,7 +5,9 @@ import Navbar from './components/Navbar';
 import { AuthProviderWrapper } from './context/auth.context';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import Protected from './pages/Protected';
+import Meeting from './pages/Meetings';
+import Profile from './pages/Profile';
+import ProfileEdit from './pages/ProfileEdit';
 import SignupPage from './pages/SignupPage';
 
 function App() {
@@ -15,10 +17,26 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/protected"
+          path="/meetings"
           element={
             <IsPrivate>
-              <Protected />
+              <Meeting />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <IsPrivate>
+              <Profile />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/profile/edit"
+          element={
+            <IsPrivate>
+              <ProfileEdit options={['Male', 'Female', 'Undefined']} />
             </IsPrivate>
           }
         />
@@ -34,7 +52,7 @@ function App() {
           path="/signup"
           element={
             <IsAnon>
-              <SignupPage />
+              <SignupPage options={['Male', 'Female', 'Undefined']} />
             </IsAnon>
           }
         />
