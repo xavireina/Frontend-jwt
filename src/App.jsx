@@ -3,8 +3,10 @@ import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
 import Navbar from './components/Navbar';
 import { AuthProviderWrapper } from './context/auth.context';
+import { MeetingsProviderWrapper } from './context/meetings.context';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
+import MeetingDetails from './pages/MeetingDetails';
 import Meeting from './pages/Meetings';
 import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
@@ -20,7 +22,19 @@ function App() {
           path="/meetings"
           element={
             <IsPrivate>
-              <Meeting />
+              <MeetingsProviderWrapper>
+                <Meeting />
+              </MeetingsProviderWrapper>
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/meetings/:id"
+          element={
+            <IsPrivate>
+              <MeetingsProviderWrapper>
+                <MeetingDetails />
+              </MeetingsProviderWrapper>
             </IsPrivate>
           }
         />
@@ -28,7 +42,9 @@ function App() {
           path="/profile"
           element={
             <IsPrivate>
-              <Profile />
+              <MeetingsProviderWrapper>
+                <Profile />
+              </MeetingsProviderWrapper>
             </IsPrivate>
           }
         />

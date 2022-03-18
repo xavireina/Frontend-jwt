@@ -6,7 +6,7 @@ import { AuthContext } from './../context/auth.context';
 const Navigation = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
-
+  console.log(user)
   return (
     <nav className="flex items-center justify-between flex-wrap bg-indigo-600 hover:bg-indigo-700 p-3">
       <Link to="/">
@@ -68,7 +68,7 @@ const Navigation = () => {
             <Link to="/profile">
               <img
                 className="block mx-4 lg:inline-block lg:mt-0 text-white-200 text-white h-9 w-9 rounded-full border border-gray-100 shadow-sm h-full"
-                src="https://source.unsplash.com/MP0IUfwrn0A"
+                src={user != null && user.image || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
                 alt=""
               />
               <span className="sr-only">{user && user.name}</span>

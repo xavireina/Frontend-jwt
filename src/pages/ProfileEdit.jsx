@@ -7,6 +7,7 @@ function ProfileEdit({ options }) {
   const [name, setName] = useState(user.name);
   const [age, setAge] = useState(user.age);
   const [gender, setGender] = useState(user.gender);
+  const [description, setDescription] = useState(user.description);
   const [errorMessage, setErrorMessage] = useState(undefined);
   const { edit } = useContext(AuthContext);
 
@@ -15,11 +16,12 @@ function ProfileEdit({ options }) {
   const handleName = e => setName(e.target.value);
   const handleAge = e => setAge(e.target.value);
   const handleGender = e => setGender(e.target.value);
+  const handleDescription = e => setDescription(e.target.value);
 
   const handleUpdateUserInfo = e => {
     e.preventDefault();
     // Create an object representing the request body
-    const requestBody = { name, age, gender };
+    const requestBody = { name, age, gender, description };
     // Make an axios request to the API
     // If POST request is successful redirect to login page
     // If the request resolves with an error, set the error message in the state``
@@ -89,9 +91,16 @@ function ProfileEdit({ options }) {
               />
               {user.age} years old
             </p>
-            <p className="pt-8 text-sm">Totally optional short description about yourself, what you do and so on.</p>
+            <input
+              id="description"
+              name="description"
+              type="text"
+              className="pt-8 text-sm"
+              placeholder="Description"
+              defaultValue={description}
+              onChange={handleDescription}
+            />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-
             <div className="pt-12 pb-8">
               <button
                 type="submit"
