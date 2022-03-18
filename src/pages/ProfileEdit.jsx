@@ -50,13 +50,13 @@ function ProfileEdit({ options }) {
               type="text"
               className="text-3xl font-bold pt-8 lg:pt-0"
               placeholder="Name"
-              defaultValue={user.name}
+              defaultValue={name}
               onChange={handleName}
             />
             <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
             <select
               className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"
-              value={user.gender}
+              value={gender}
               name="gender"
               onChange={handleGender}
               required
@@ -84,7 +84,7 @@ function ProfileEdit({ options }) {
                 type="number"
                 className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start"
                 placeholder="Age"
-                defaultValue={user.age}
+                defaultValue={age}
                 onChange={handleAge}
               />
               {user.age} years old
