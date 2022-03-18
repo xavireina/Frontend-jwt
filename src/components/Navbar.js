@@ -66,11 +66,14 @@ const Navigation = () => {
         {isLoggedIn && (
           <>
             <Link to="/profile">
-              <img
-                className="block mx-4 lg:inline-block lg:mt-0 text-white-200 text-white h-9 w-9 rounded-full border border-gray-100 shadow-sm h-full"
-                src={user != null && user.image || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
-                alt=""
-              />
+              <button className="block mt-4 lg:inline-block lg:mt-0 text-white-200 text-white mr-4">
+                <img
+                  className="block mx-6 lg:inline-block lg:mt-0 text-white-200 text-white h-9 w-9 rounded-full border border-gray-100 shadow-sm h-full"
+                  src={(user != null && user.image) || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}
+                  alt=""
+                />
+              </button>
+
               <span className="sr-only">{user && user.name}</span>
             </Link>
             <button
