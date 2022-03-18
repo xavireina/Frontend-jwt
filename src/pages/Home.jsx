@@ -20,7 +20,7 @@ function Home() {
       <br />
       <br />
       <section>
-        <p className=' rounded-full text-center text-lg	className="group relative w-full flex justify-center py-10 px-10 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"'>
+        <p className=' rounded-full text-center text-lg	className="group relative w-full flex justify-center py-10 px-10 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"'>
           FitFun pretend to change the way of doing sports in the world. In recent years, alternatives to the
           conventional gym have been born. With FitFun, I intend to unite sport and laughter, to offer an alternative
           gym that seeks the Global well-being of people

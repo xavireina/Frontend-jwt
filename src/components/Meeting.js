@@ -4,7 +4,7 @@ import JoinButton from './JoinButton';
 const Meeting = props => {
   const isPastMeeting = new Date(props.date) <= new Date();
   return (
-    <div className="m-3 p-3 max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700">
+    <div className="m-3 p-3 max-w-sm rounded-lg border shadow-md bg-blue-900 opacity-80 border-violet-700">
       <a href="#">
         <img className="rounded-t-lg w-full h-48 object-cover" src={props.image} alt="" />
       </a>

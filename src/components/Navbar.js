@@ -8,7 +8,7 @@ const Navigation = () => {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   console.log(user)
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-indigo-600 hover:bg-indigo-700 p-3">
+    <nav className="flex items-center justify-between flex-wrap bg-blue-900 p-3">
       <Link to="/">
         <button className="flex items-center">
           <img
