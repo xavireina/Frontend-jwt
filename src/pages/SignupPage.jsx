@@ -8,7 +8,7 @@ function SignupPage({ options }) {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
-  const [gender, setGender] = useState('');
+  const [gender, setGender] = useState(options[0]);
   const [errorMessage, setErrorMessage] = useState(undefined);
   const { signup } = useContext(AuthContext);
 
@@ -117,8 +117,7 @@ function SignupPage({ options }) {
                 value={gender}
                 name="gender"
                 onChange={handleGender}
-                required
-              >
+                required>
                 {options.map(o => (
                   <option key={o} value={o}>
                     {o}
