@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.1",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.9.0",
     "eslint-plugin-jest": "^26.1.1",
