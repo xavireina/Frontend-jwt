@@ -35,7 +35,8 @@ function MeetingsProviderWrapper(props) {
     // Run the function after the initial render,
     // after the components in the App render for the first time.
     computeMeetings();
-  }, [computeMeetings]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <MeetingsContext.Provider
