@@ -35,7 +35,7 @@ function MeetingsProviderWrapper(props) {
     // Run the function after the initial render,
     // after the components in the App render for the first time.
     computeMeetings();
-  }, []);
+  }, [computeMeetings]);
 
   return (
     <MeetingsContext.Provider
